@@ -10,8 +10,8 @@ func _ready() -> void:
 	super()
 	position = target.position
 	
-
 func _process(delta: float) -> void:
+	
 	if !current:
 		return
 	
@@ -21,20 +21,19 @@ func _process(delta: float) -> void:
 	var tpos = target.global_position
 	var cpos = global_position
 	
-	#boundary checks
-	#left
+	# Left.
 	var diff_between_left_edges = (tpos.x - target.WIDTH / 2.0) - (cpos.x - box_width / 2.0)
 	if diff_between_left_edges < 0:
 		global_position.x += diff_between_left_edges
-	#right
+	# Right.
 	var diff_between_right_edges = (tpos.x + target.WIDTH / 2.0) - (cpos.x + box_width / 2.0)
 	if diff_between_right_edges > 0:
 		global_position.x += diff_between_right_edges
-	#top
+	# Top.
 	var diff_between_top_edges = (tpos.z - target.HEIGHT / 2.0) - (cpos.z - box_height / 2.0)
 	if diff_between_top_edges < 0:
 		global_position.z += diff_between_top_edges
-	#bottom
+	# Bottom.
 	var diff_between_bottom_edges = (tpos.z + target.HEIGHT / 2.0) - (cpos.z + box_height / 2.0)
 	if diff_between_bottom_edges > 0:
 		global_position.z += diff_between_bottom_edges
@@ -75,6 +74,7 @@ func draw_logic() -> void:
 	add_child(mesh_instance)
 	mesh_instance.global_transform = Transform3D.IDENTITY
 	mesh_instance.global_position = Vector3(global_position.x, target.global_position.y, global_position.z)
+	
 	
 	#mesh is freed after one update of _process
 	await get_tree().process_frame
