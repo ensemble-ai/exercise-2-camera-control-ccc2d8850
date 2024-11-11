@@ -1,22 +1,5 @@
 # Peer-Review for Programming Exercise 2 #
 
-## Description ##
-
-For this assignment, you will be giving feedback on the completeness of assignment two: Obscura. To do so, we will give you a rubric to provide feedback. Please give positive criticism and suggestions on how to fix segments of code.
-
-You only need to review code modified or created by the student you are reviewing. You do not have to check the code and project files that the instructor gave out.
-
-Abusive or hateful language or comments will not be tolerated and will result in a grade penalty or be considered a breach of the UC Davis Code of Academic Conduct.
-
-If there are any questions at any point, please email the TA.   
-
-## Due Date and Submission Information
-See the official course schedule for due date.
-
-A successful submission should consist of a copy of this markdown document template that is modified with your peer review. This review document should be placed into the base folder of the repo you are reviewing in the master branch. The file name should be the same as in the template: `CodeReview-Exercise2.md`. You must also include your name and email address in the `Peer-reviewer Information` section below.
-
-If you are in a rare situation where two peer-reviewers are on a single repository, append your UC Davis user name before the extension of your review file. An example: `CodeReview-Exercise2-username.md`. Both reviewers should submit their reviews in the master branch.  
-
 # Solution Assessment #
 
 ## Peer-reviewer Information
@@ -89,26 +72,13 @@ Camera follows the target with the expected behavior. Camera does not move when 
 ___
 # Code Style #
 
-
-### Description ###
-Check the scripts to see if the student code adheres to the GDScript style guide.
-
-If sections do not adhere to the style guide, please peramlink the line of code from Github and justify why the line of code has not followed the style guide.
-
-It should look something like this:
-
-* [description of infraction](https://github.com/dr-jam/ECS189L) - this is the justification.
-
-Please refer to the first code review template on how to do a permalink.
-
-
 #### Style Guide Infractions ####
+* [unnecessary line spacing](https://github.com/ensemble-ai/exercise-2-camera-control-ccc2d8850/blob/986925644c5f91239c6e46821cf26dee20247fb4/Obscura/scripts/camera_controllers/lock_lerp_smoothing.gd#L16) - blank lines in functions in opposition with style guide
+* [functions not separated by 2 blank lines](https://github.com/ensemble-ai/exercise-2-camera-control-ccc2d8850/blob/986925644c5f91239c6e46821cf26dee20247fb4/Obscura/scripts/camera_controllers/horizontal_auto_scroll.gd#L13C1-L14C1) - functions and class definitions should be surrounded by two blank lines as described in the style guide
 
 #### Style Guide Exemplars ####
-
-___
-#### Put style guide infractures ####
-
+* [appropriate indenting](https://github.com/ensemble-ai/exercise-2-camera-control-ccc2d8850/blob/986925644c5f91239c6e46821cf26dee20247fb4/Obscura/scripts/camera_controllers/position_lock_camera.gd#L14) - lines are appropriately indented according to the style guide and conditional statements are contained to single lines
+* [appropriate comment spacing](https://github.com/ensemble-ai/exercise-2-camera-control-ccc2d8850/blob/986925644c5f91239c6e46821cf26dee20247fb4/Obscura/scripts/camera_controllers/lerp_smoothing_target_focus.gd#L96) - comments have a space and commented out code does not, with accordance to the style guide
 ___
 
 # Best Practices #
@@ -116,6 +86,8 @@ ___
 
 #### Best Practices Infractions ####
 * [comment left behind](https://github.com/ensemble-ai/exercise-2-camera-control-ccc2d8850/blob/b9e71584e9375f49ca04c8109507db2f4e0f4922/Obscura/scripts/camera_controllers/four_way_speedup_push_zone.gd#L89) - comment left behind that prints when target is touching corners that prints to console while program runs; causes a lot of console print statements that may cause issues on slower computers
-* 
+* version control -- code was pushed all at once rather than continuous pushes to ensure best version control practices
+* [unused functions left](https://github.com/ensemble-ai/exercise-2-camera-control-ccc2d8850/blob/b9e71584e9375f49ca04c8109507db2f4e0f4922/Obscura/scripts/camera_controllers/four_way_speedup_push_zone.gd#L55) - functions are left behind and commented out that are no longer necessary and may cause confusion
 
 #### Best Practices Exemplars ####
+* [descriptive comments](https://github.com/ensemble-ai/exercise-2-camera-control-ccc2d8850/blob/b9e71584e9375f49ca04c8109507db2f4e0f4922/Obscura/scripts/camera_controllers/four_way_speedup_push_zone.gd#L61C1-L62C1) - comments describing functions are concise and descriptive
